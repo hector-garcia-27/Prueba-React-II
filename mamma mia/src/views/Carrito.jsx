@@ -3,7 +3,7 @@ import { PizzaContext } from "../context/PizzaContext"
 
 
 export default function Carrito() {
-    const { dataPizza, sumar, restar, total } = useContext(PizzaContext)
+    const { dataPizza, añadirAlCarrito, restar, total } = useContext(PizzaContext)
 
     const filterCarrito = dataPizza.filter((element) => element.cantidad > 0)
     console.log(filterCarrito)
@@ -22,7 +22,7 @@ export default function Carrito() {
                             <p>$ {pizzaFilter.price.toLocaleString('es-ES') * pizzaFilter.cantidad.toLocaleString('es-ES')}</p>
                             <button onClick={() => restar(pizzaFilter.id)}>-</button>
                             <p>{pizzaFilter.cantidad}</p>
-                            <button onClick={() => sumar(pizzaFilter.id)}>+</button>
+                            <button onClick={() => añadirAlCarrito(pizzaFilter.id)}>+</button>
                         </div>
                     </div>
                 </div>

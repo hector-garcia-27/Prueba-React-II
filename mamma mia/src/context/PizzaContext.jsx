@@ -4,11 +4,9 @@ export const PizzaContext = createContext();
 
 const PizzaProvider = ({ children }) => {
 
-    // Estados
-    const [dataPizza, setDataPizza] = useState([])
-    const [total, setTotal] = useState(0)
-
     // Peticion a la API
+    const [dataPizza, setDataPizza] = useState([])
+
     const consultaApi = async () => {
         try {
             const apiUrl = '/pizzas.json'
@@ -21,7 +19,6 @@ const PizzaProvider = ({ children }) => {
         }
     }
 
-    //llamado al cargarse la pagina (1 sola vez)
     useEffect(() => {
         consultaApi()
     }, [])
@@ -36,15 +33,6 @@ const PizzaProvider = ({ children }) => {
         }))
     }
 
-    //Funcion para aumentar desde el boton del carrito
-    const sumar = (id) => {
-        setDataPizza(dataPizza.map((pizza) => {
-            if (pizza.id === id) {
-                return { ...pizza, cantidad: (pizza.cantidad + 1) }
-            }
-            return pizza;
-        }))
-    }
     // Funcion para disminuir desde el boton de carrito
     const restar = (id) => {
         setDataPizza(dataPizza.map((pizza) => {
@@ -56,6 +44,7 @@ const PizzaProvider = ({ children }) => {
     }
 
     //funcion para sumar el total 
+    const [total, setTotal] = useState(0)
 
     const sumarTotal = () => {
         const totalCarrito = dataPizza.reduce((acumulador, valorObjeto)=>{
@@ -69,7 +58,7 @@ const PizzaProvider = ({ children }) => {
     },[dataPizza])
 
     return (
-        <PizzaContext.Provider value={{ dataPizza, añadirAlCarrito, sumar, restar, total }}>
+        <PizzaContext.Provider value={{ dataPizza, añadirAlCarrito, restar, total }}>
             {children}
         </PizzaContext.Provider>
     )
