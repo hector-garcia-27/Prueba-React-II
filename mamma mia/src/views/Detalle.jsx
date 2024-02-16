@@ -24,6 +24,7 @@ export default function Detalle() {
                     <div>
                         <h3>Precio: ${pizzaSelected.price.toLocaleString('es-ES')}</h3>
                         <button onClick={()=>añadirAlCarrito(pizzaSelected.id)}>Añadir</button>
+                        <p>En carrito: {pizzaSelected.cantidad}</p>
                     </div>
                 </div>
             </div>

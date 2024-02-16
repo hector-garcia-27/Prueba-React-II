@@ -1,6 +1,9 @@
 import { NavLink } from "react-router-dom"
+import { useContext } from "react"
+import { PizzaContext } from "../context/PizzaContext"
 
 export default function Navbar() {
+    const {total} = useContext(PizzaContext)
 
     const isActiveClass = ({ isActive }) => (isActive ? 'active' : 'inactive')
     return (
@@ -15,7 +18,7 @@ export default function Navbar() {
             <div className="nav2">
                 <NavLink to='/carrito'>
                     <img src="..." alt="icono carrito" />
-                    <p className="texto">total del carrito</p>
+                    <p className="texto">total: {total}</p>
                 </NavLink>
             </div>
         </nav>

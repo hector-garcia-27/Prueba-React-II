@@ -12,8 +12,8 @@ function App() {
 
   return (
     <>
-      <Navbar />
       <PizzaProvider>
+      <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/detalle/:id' element={<Detalle />} />

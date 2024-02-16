@@ -30,6 +30,7 @@ export default function Home() {
                                 <p>Añadir</p>
                                 <img src="..." alt="icono carrito" />
                             </button>
+                            <p>En carrito: {pizza.cantidad}</p>
                         </div>
                     </div>
                 )
