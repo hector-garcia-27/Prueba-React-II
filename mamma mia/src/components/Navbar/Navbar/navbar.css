@@ -1,0 +1,53 @@
+nav>.info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+}
+
+.info>.nav1, .nav2{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-inline: 10px;
+
+}
+
+.info>.nav1>img, .nav2> img{
+    width: 20px;
+}
+
+.titulo {
+    background-image: url("https://cdn.pixabay.com/photo/2016/12/16/15/25/christmas-1911637_640.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.titulo>h2, p{
+    color: white;
+    padding: 10px;
+}
+
+.baseNavbar {
+    text-decoration: none;
+    color: white;
+    align-items: center;
+    margin: 0;
+ }
+
+ .active {
+    color: rgb(129, 129, 178);
+    text-decoration: none;
+ }
+
+ .inactive {
+    color: white;
+    text-decoration: none;
+ }
+

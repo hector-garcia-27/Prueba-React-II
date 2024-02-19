@@ -1,0 +1,82 @@
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+}
+
+.card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border: solid 1px black;
+    width: 280px;
+    width: calc(100% - 20px);
+    margin-bottom: 20px;
+}
+
+.card>img {
+    width: 100%;
+}
+
+.card>ul>.lista {
+    list-style: none;
+    padding-left: 10px;
+    text-align: start;
+}
+
+.card>ul>.lista:before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url("/src/assets/iconPizza.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+}
+
+.card>.botones {
+    display: flex;
+    gap: 10px;
+    
+}
+
+.card>.botones>button {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    justify-content: center ;
+    width: 100px;
+    border: none;
+    background-color: black;
+    color: white;
+}
+
+.card>.botones>button>img {
+    width : 25px;
+    padding-left: 10px;
+}
+
+.precio {
+    color: black;
+}
+
+@media (min-width: 576px) {
+    .card {
+        width: calc(50% - 20px);    
+    }
+}
+
+@media (min-width: 768px) {
+    .card {
+        width: calc(33.33% - 20px);
+    }
+}

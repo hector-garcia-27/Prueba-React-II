@@ -1,6 +1,7 @@
 import { useContext } from "react"
-import { PizzaContext } from "../context/PizzaContext"
+import { PizzaContext } from "../../context/PizzaContext"
 import { useNavigate } from "react-router-dom"
+import './Home.css'
 
 export default function Home() {
 
@@ -9,29 +10,27 @@ export default function Home() {
 
     const irADetalles = (id) => { navigate(`/detalle/${id}`) }
 
-    const irAlCarrito = () => { }
-
     console.log(dataPizza)
     return (
-        <div>
+        <div className="menu">
             {dataPizza.map((pizza) => {
                 return (
                     <div className="card" key={pizza.id}>
                         <img src={pizza.img} alt="foto de la pizza" />
                         <h1>{pizza.name}</h1>
                         <ul>{pizza.ingredients.map((ingrediente, index) => (
-                            <li key={index}>{ingrediente}</li>
+                            <li className="lista" key={index}>{ingrediente}</li>
                         ))}
                         </ul>
-                        <p className="price">$ {pizza.price.toLocaleString('es-ES')}</p>
+                        <p className="precio">$ {pizza.price.toLocaleString('es-ES')}</p>
                         <div className="botones">
                             <button onClick={() => irADetalles(pizza.id)}>Ver mas</button>
-                            <button onClick={()=> añadirAlCarrito(pizza.id)}>
-                                <p>Añadir</p>
-                                <img src="..." alt="icono carrito" />
+                            <button onClick={() => añadirAlCarrito(pizza.id)}>
+                                Añadir
+                                <img src="/src/assets/carrito.svg" alt="icono carrito" />
                             </button>
-                            <p>En carrito: {pizza.cantidad}</p>
                         </div>
+                        <p className="precio">En carrito: {pizza.cantidad}</p>
                     </div>
                 )
             })}

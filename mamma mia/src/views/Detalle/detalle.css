@@ -1,0 +1,61 @@
+
+
+.detalle {
+    display: flex;
+    margin: 20px;
+    border: solid 1px #ecececf3;
+}
+
+.detalle>.description {
+    margin: 20px;
+    text-align: start;
+}
+
+.detalle>.description>.nombre {
+    padding-bottom: 20px;
+    border-bottom: solid 2px #ecececb5;
+}
+
+.detalle>.description>p {
+    color: black;
+}
+
+.detalle>.description>ul>.ingredientes {
+    list-style: none;
+    padding-left: 10px;
+    text-align: start;
+    display: flex;
+    align-items: center;
+}
+
+.detalle>.description>ul>.ingredientes:before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url("/src/assets/iconPizza.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+}
+
+.detalle>.description>.btncar{
+    display: flex;
+    justify-content: end;
+}
+
+.detalle>.description>.btncar>.btn {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    justify-content: center ;
+    width: 100px;
+    border: none;
+    background-color: black;
+    color: white;
+}
+.detalle>.description>.btncar>.btn> img{
+    width : 25px;
+    padding-left: 10px;
+}

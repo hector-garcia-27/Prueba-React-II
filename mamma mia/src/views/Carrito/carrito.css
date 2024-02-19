@@ -1,0 +1,44 @@
+.containerCarrito>.pedido{
+    padding: 50px;
+}
+
+.containerCarrito>.tab>.tabla{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.containerCarrito>.tab>.tabla>.inicio{
+    gap: 10px;
+    align-items: center;
+}
+
+.containerCarrito>.tab>.tabla>.contador{
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerCarrito>.tab>.tabla>.contador>.botonCarrito{
+    background-color: black;
+    color: white;
+    border: none;
+    width: 30px;
+}
+
+.containerCarrito>.tab>.tabla>.contador>.precioCarrito{
+    margin: 0;
+}
+
+.containerCarrito>.tab>.tabla>.inicio>.foto{
+    width: 50px;
+}
+
+.containerCarrito>.total{
+    margin: 0;
+    display: flex;
+    justify-content: end;
+    padding: 20px;
+}
+
+
